@@ -5,6 +5,9 @@ These python script give alert sound or send sms to your mobile when Coronavirus
 ### cowin_vaccine_alert_with_sms.py send text message at your mobile number and give sound alert in your systems.
 
 ## prerequisite to run cowin_vaccine_alert.py, open script change picode with your pincode
+
+git clone https://github.com/deepeshguru/cowin-covid-vacine-alert-using-python.git
+
 install google chrome browser in you system
 
 After google chrome installation download chromedriver from https://chromedriver.chromium.org/downloads according to your OS and google chrome version
@@ -20,6 +23,8 @@ python -m pip install selenium
 python owin_vaccine_alert.py
 
 ## prerequisite to run cowin_vaccine_alert_with_sms.py, open script change picode with your pincode and mobile number with your number
+
+git clone https://github.com/deepeshguru/cowin-covid-vacine-alert-using-python.git
 
 Reference for sending text message using python is taken from "https://www.geeksforgeeks.org/send-text-messages-to-any-mobile-number-using-fast2sms-api-in-python/"
 
