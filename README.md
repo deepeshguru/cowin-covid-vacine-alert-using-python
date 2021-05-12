@@ -1,5 +1,5 @@
 # cowin-covid-vacine-alert-using-python
-These python script give alert sound or send sms to your mobile when Coronavirus (COVID-19) vaccines slot is available for your desire pincode at Cowin - Government of India website
+These python script give alert sound or send sms to your mobile when Coronavirus (COVID-19) vaccines slot is available for your desire pincode at Cowin - Government of India https://www.cowin.gov.in/home
 
 ### cowin_vaccine_alert.py script give sound alert in your systems.
 ### cowin_vaccine_alert_with_sms.py send text message at your mobile number and give sound alert in your systems.
