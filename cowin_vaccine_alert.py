@@ -3,6 +3,7 @@
 ## prerequisite to run below code
 # install google chrome browser in you system
 # After google chrome installation download chromedriver from https://chromedriver.chromium.org/downloads according to your OS and google chrome version
+# And unzip chromedriver zip file to cowin-covid-vacine-alert-using-python path
 # python version >= 3.6
 # install selenium using below command
 # python -m pip install selenium
