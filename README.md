@@ -4,13 +4,14 @@ These python script give alert sound or send sms to your mobile when Coronavirus
 ### cowin_vaccine_alert.py script give sound alert in your systems.
 ### cowin_vaccine_alert_with_sms.py send text message at your mobile number and give sound alert in your systems.
 
-## prerequisite to run cowin_vaccine_alert.py, open script change picode with your pincode
-
+## prerequisite to run cowin_vaccine_alert.py
 git clone https://github.com/deepeshguru/cowin-covid-vacine-alert-using-python.git
 
 install google chrome browser in you system
 
 After google chrome installation download chromedriver from https://chromedriver.chromium.org/downloads according to your OS and google chrome version
+
+Unzip Chromedriver zip file to inside cowin-covid-vacine-alert-using-python folder
 
 python version >= 3.6
 
@@ -18,11 +19,13 @@ install selenium using below command
 
 python -m pip install selenium
 
-## To run owin_vaccine_alert.py script
+## To run cowin_vaccine_alert.py script
 
-python owin_vaccine_alert.py
+python cowin_vaccine_alert.py --pincode pincode
 
-## prerequisite to run cowin_vaccine_alert_with_sms.py, open script change picode with your pincode and mobile number with your number
+e.g. python cowin_vaccine_alert.py --pincode 560020
+
+## prerequisite to run cowin_vaccine_alert_with_sms.py
 
 git clone https://github.com/deepeshguru/cowin-covid-vacine-alert-using-python.git
 
@@ -40,6 +43,9 @@ install google chrome browser in you system
 
 After google chrome installation download chromedriver from https://chromedriver.chromium.org/downloads according to your OS and google chrome version
 
+Unzip Chromedriver zip file to inside cowin-covid-vacine-alert-using-python folder
+
+
 python version >= 3.6
 
 install selenium using below command
@@ -47,7 +53,9 @@ install selenium using below command
 python -m pip install selenium
 
 
-## To run owin_vaccine_alert.py script
-python cowin_vaccine_alert_with_sms.py
+## To run cowin_vaccine_alert_with_sms.py
+python cowin_vaccine_alert_with_sms.py --pincode pincode --mobile_number mobile_number
+
+e.g. python cowin_vaccine_alert_with_sms.py --pincode 560020 --mobile_number 8888888888
 
 ### Note:- While running script don't turn off your system and screen. if screen turn off your will not get audio sound alert.
