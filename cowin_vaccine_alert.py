@@ -11,12 +11,27 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import time
+import argparse
+import platform
 
-#Enter you pincode below
-pincode = "470117"
+parser = argparse.ArgumentParser(description='Covid Vaccine Alert Program.')
 
+parser.add_argument("-p", "--pincode", help="Enter your pincode.", default="470117")
+args = parser.parse_args()
+pincode = args.pincode
+
+system = platform.system()
 #set chromodriver path below
-chromedriver_path = r"C:\Users\deepesh\Downloads\chromedriver_win32\chromedriver.exe"
+if system = 'Windows':
+    chromedriver_path = r".\chromedriver_win32\chromedriver.exe"
+elif system = 'Linux':
+    chromedriver_path = r"./chromedriver_linux64/chromedriver"
+elif system = "Darwin":
+    chromedriver_path = r"./chromedriver_mac64/chromedriver"
+else:
+    print("your OS doesn't support chrome drive")
+    exit()
+
 driver = webdriver.Chrome(executable_path=chromedriver_path)
 driver.implicitly_wait(0.5)
 
