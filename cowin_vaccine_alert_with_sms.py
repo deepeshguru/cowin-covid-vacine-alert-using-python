@@ -8,6 +8,7 @@
 # Note Only 10 sms/day you can send in free
 # install google chrome browser in you system
 # After google chrome installation download chromedriver from https://chromedriver.chromium.org/downloads according to your OS and google chrome version
+# And unzip chromedriver zip file to cowin-covid-vacine-alert-using-python path
 # python version >= 3.6
 # install selenium using below command
 # python -m pip install selenium
@@ -17,8 +18,13 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import time
 
-#Enter you pincode below
-pincode = "470117"
+import platform
+
+parser = argparse.ArgumentParser(description='Covid Vaccine Alert Program.')
+
+parser.add_argument("-p", "--pincode", help="Enter your pincode.", default="470117")
+args = parser.parse_args()
+pincode = args.pincode
 
 # import required module
 from selenium import webdriver
@@ -53,8 +59,18 @@ headers = {
     'Cache-Control': "no-cache"
 }
 
+system = platform.system()
 #set chromodriver path below
-chromedriver_path = r"C:\Users\deepesh\Downloads\chromedriver_win32\chromedriver.exe"
+if system = 'Windows':
+    chromedriver_path = r".\chromedriver_win32\chromedriver.exe"
+elif system = 'Linux':
+    chromedriver_path = r"./chromedriver_linux64/chromedriver"
+elif system = "Darwin":
+    chromedriver_path = r"./chromedriver_mac64/chromedriver"
+else:
+    print("your OS doesn't support chrome drive")
+    exit()
+
 driver = webdriver.Chrome(executable_path=chromedriver_path)
 driver.implicitly_wait(0.5)
 
