@@ -8,7 +8,6 @@
 # Note Only 10 sms/day you can send in free
 # install google chrome browser in you system
 # After google chrome installation download chromedriver from https://chromedriver.chromium.org/downloads according to your OS and google chrome version
-# And unzip chromedriver zip file to cowin-covid-vacine-alert-using-python path
 # python version >= 3.6
 # install selenium using below command
 # python -m pip install selenium
@@ -23,8 +22,12 @@ import platform
 parser = argparse.ArgumentParser(description='Covid Vaccine Alert Program.')
 
 parser.add_argument("-p", "--pincode", help="Enter your pincode.", default="470117")
+parser.add_argument("-m", "--mobile_number", help="Enter your pincode.", default="0000000000")
+
 args = parser.parse_args()
 pincode = args.pincode
+mobile = args.mobile_number
+
 
 # import required module
 from selenium import webdriver
@@ -49,7 +52,7 @@ my_data = {
     # You can send sms to multiple numbers
     # change mobile mobile number below
     # if you want to send meassage on multiple number then separate numbers by comma.
-    'numbers': '9999999999'
+    'numbers': mobile #e.g for multiple numbers "8888888888, 9999999999, 7777777777"
 }
 
 # create a dictionary
