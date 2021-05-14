@@ -16,7 +16,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import time
-
+import argparse
 import platform
 
 parser = argparse.ArgumentParser(description='Covid Vaccine Alert Program.')
@@ -64,11 +64,11 @@ headers = {
 
 system = platform.system()
 #set chromodriver path below
-if system = 'Windows':
+if system == 'Windows':
     chromedriver_path = r".\chromedriver_win32\chromedriver.exe"
-elif system = 'Linux':
+elif system == 'Linux':
     chromedriver_path = r"./chromedriver_linux64/chromedriver"
-elif system = "Darwin":
+elif system == "Darwin":
     chromedriver_path = r"./chromedriver_mac64/chromedriver"
 else:
     print("your OS doesn't support chrome drive")
@@ -87,7 +87,7 @@ while(1):
         time.sleep(5)
         m = driver.find_element_by_xpath("/html/body/app-root/div/app-home/div[2]/div/appointment-table/div/div/div/div/div/div/div/div/div/div/div[2]/form/div/div/div[2]/div/input")
         m.send_keys(pincode)
-        time.sleep(5)
+        time.sleep(1)
         m.send_keys(Keys.ENTER)
         time.sleep(5)
         m = driver.find_element_by_xpath("/html/body/app-root/div/app-home/div[2]/div/appointment-table/div/div/div/div/div/div/div/div/div/div/div[2]/form/div/div/div[7]/div/div")
